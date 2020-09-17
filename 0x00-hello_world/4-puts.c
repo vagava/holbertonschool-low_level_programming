@@ -1,10 +1,10 @@
 #include<stdio.h>
-/*
- * print a text string whit puts
- *
- */
-main ()
+/**
+* main - print a text string with puts
+* Return: cero
+*/
+int main(void)
 {
 	puts("Programming is like building a multilingual puzzle\n");
-	return 0;
+	return (0);
 }
