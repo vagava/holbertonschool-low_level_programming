@@ -13,7 +13,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 - What is main
 
--How to print text using printf, puts and putchar
+- How to print text using printf, puts and putchar
 
 - How to get the size of a specific type using the unary operator sizeof
 
