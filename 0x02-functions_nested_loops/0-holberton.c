@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char c[] = "Holberton\n";
+	char c[] = "Holberton";
 	int i;
 
 	for (i = 0; c[i] != 00 ; i++)
