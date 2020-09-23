@@ -4,7 +4,7 @@
  * @n: number to check
  * Return: 1 if n is +, 0 if n is 0; -1 if n is -
  */
-int print_sing(int n)
+int print_sign(int n)
 {
 	if (n > 0)
 	{
