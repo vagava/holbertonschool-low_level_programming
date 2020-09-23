@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_sing - print the sing of a number
+ * print_sign - print the sing of a number
  * @n: number to check
  * Return: 1 if n is +, 0 if n is 0; -1 if n is -
  */
