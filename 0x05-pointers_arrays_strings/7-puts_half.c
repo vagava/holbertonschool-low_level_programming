@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- *
- *
+ * puts_half - imprime desde la mitad
+ * @str: cadena
  */
 void puts_half(char *str)
 {
@@ -12,13 +12,13 @@ void puts_half(char *str)
 		k++;
 	}
 
-	j = (k - 1)/2;
+	j = (k - 1) / 2;
 	if (j % 2 == 0)
 		for (h = j + 1; h <= (k - 1); h++)
 		{
 		_putchar(str[h]);
 		}
-	else 
+	else
 		for (h = j + 1; h <= (k - 1); h++)
 		{
 			_putchar(str[h]);
