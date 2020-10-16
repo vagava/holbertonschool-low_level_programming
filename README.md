@@ -27,6 +27,8 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 - How does the main function influence the return value of the program
 
+- The C language is belonging to middle level programming language.
+
 
 ## Requirements
 
