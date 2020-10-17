@@ -1,13 +1,28 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- *
- *
- *
+ * array_range - print integer ordered
+ * @min: element minimo
+ * @max: element maximo
+ * Return: pointer
  */
 int *array_range(int min, int max)
 {
-	int *a = malloc((max - min)sizeof(int))
+	int i, d = (max - min) + 1;
+	int *a = malloc(d*sizeof(int));
 
+	if (a == NULL)
+	{	free(a);
+		return(NULL);
+	}
+	if (max < min)
+	{
+		free(a);
+		return(NULL);
+	}
+	for (i = 0;(min + i) <= max; i++)
+		{
+			*(a + i) = min + i;
+		}
 		return(a);
 }
