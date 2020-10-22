@@ -14,7 +14,7 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
-void *malloc_checked(unsigned int b);
-char *string_nconcat(char *s1, char *s2, unsigned int n);
+int main (int argc, char ** argv);
+char *create_array(unsigned int size, char c);
 
 #endif
