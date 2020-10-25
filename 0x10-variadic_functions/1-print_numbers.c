@@ -17,7 +17,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 /*recorrer argumentos*/
 	for (i = 0; i < n; i++)
 	{
-		imp = va_arg(list, int);
+		imp = va_arg(list, unsigned int);
 
 		if (i == n - 1)
 			printf("%d", imp);
