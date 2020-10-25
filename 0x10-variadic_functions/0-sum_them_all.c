@@ -12,9 +12,6 @@ int sum_them_all(const unsigned int n, ...)
 /*inicializar macro con lista de argumentos y argumentos requeridos*/
 	va_start(list, n);
 /*ciclo para recorrer los argumentos dados*/
-	if (n == 0)
-		return (0);
-
 	for (i = 0; i < n; i++)
 	{
 		result = result + va_arg(list, unsigned int);
