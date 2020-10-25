@@ -9,13 +9,13 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int imp;
+	unsigned int imp = 0, i;
 /*variable tipo va_list*/
 	va_list list;
 /*inicializar macro*/
 	va_start(list, n);
 /*recorrer argumentos*/
-	for (unsigned int i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		imp = va_arg(list, int);
 
