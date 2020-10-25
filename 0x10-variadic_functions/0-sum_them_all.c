@@ -6,16 +6,16 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
+	unsigned int i, result = 0;
 /* definir variable tipo va_list*/
 	va_list list;
-	unsigned int result = 0;
 /*inicializar macro con lista de argumentos y argumentos requeridos*/
 	va_start(list, n);
 /*ciclo para recorrer los argumentos dados*/
 	if (n == 0)
 		return (0);
 
-	for (unsigned int i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		result = result + va_arg(list, unsigned int);
 	}
