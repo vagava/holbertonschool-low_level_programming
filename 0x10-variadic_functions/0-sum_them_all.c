@@ -8,7 +8,7 @@ int sum_them_all(const unsigned int n, ...)
 {
 /* definir variable tipo va_list*/
 	va_list list;
-	int result = 0;
+	unsigned int result = 0;
 /*inicializar macro con lista de argumentos y argumentos requeridos*/
 	va_start(list, n);
 /*ciclo para recorrer los argumentos dados*/
