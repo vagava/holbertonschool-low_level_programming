@@ -9,11 +9,12 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
+	unsigned int imp;
+/*variable tipo va_list*/
 	va_list list;
-	int imp;
-
+/*inicializar macro*/
 	va_start(list, n);
-
+/*recorrer argumentos*/
 	for (unsigned int i = 0; i < n; i++)
 	{
 		imp = va_arg(list, int);
@@ -25,6 +26,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		else
 			printf("%d ", imp);
 	}
+/*liberar memoria*/
 	va_end(list);
 	printf("\n");
 }
