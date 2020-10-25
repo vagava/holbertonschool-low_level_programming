@@ -19,10 +19,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		imp = va_arg(list, int);
 
-		if (i == n - 1 || separator == NULL)
-			printf("%d ", imp);
-		else
+		if (i == n - 1)
+			printf("%d", imp);
+		else if (separator != NULL)
 			printf("%d%s", imp, separator);
+		else
+			printf("%d", imp);
 	}
 /*liberar memoria*/
 	va_end(list);
