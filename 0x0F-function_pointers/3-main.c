@@ -5,7 +5,7 @@
  * main - recibe argumentos para realizar operaciones
  * @argc: cantidad de argumentos
  * @argv: argumentos
- * return: cero
+ * Return: cero
  */
 int main(int argc, char **argv)
 {
