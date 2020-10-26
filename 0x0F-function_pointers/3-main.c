@@ -19,9 +19,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-	if ((get_op_func(argv[2])) != NULL)
-		printf("%d\n", get_op_func(argv[2])(a1, a2));
-	else
+	if ((get_op_func(argv[2])) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
@@ -31,5 +29,7 @@ int main(int argc, char **argv)
 		   printf("Error\n");
 		   exit(100);
 	}
+
+	printf("%d\n", get_op_func(argv[2])(a1, a2));
 	return (0);
 }
