@@ -17,8 +17,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	fd = open(filename, O_RDONLY);
 	count = read(fd, buf, letters);
-	buf[count] = '\n';
-	buf[count + 1] = '\0';
+	buf[count] = '\0';
 
 	if (count <= 0 || fd <= 0)
 		return (0);
