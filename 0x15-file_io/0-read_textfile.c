@@ -1,32 +1,41 @@
 #include "holberton.h"
 /**
- * read_textfile - no se que putas estoy haciendo
- * @filename: no se para que sirve
- * @letters: me imagino que sera un entero positivo
+ * read_textfile - red un text file
+ * @filename: puntero a un acrchivo para leer
+ * @letters: tamaño del buffer
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	unsigned int count;
+	ssize_t count;
 	char *buf;
-
-	buf = malloc(sizeof(char) * (letters));
 
 	if (filename == NULL)
 		return (0);
 
+	buf = malloc(sizeof(char) * (letters));
+	if (buf == NULL)
+		return(0);
+	
 	fd = open(filename, O_RDONLY);
-	count = read(fd, buf, letters);
-	buf[count] = '\0';
+	if (fd == -1)
+	{
+		free(buf);
+		return(0);
+	}
 
-	if (count <= 0 || fd <= 0)
+	count = read(fd, buf, letters);
+	if (count == -1)
+	{
+		free(buf);
 		return (0);
-	if (count < letters)
-		write(STDOUT_FILENO, buf, letters);
-	else if (count == letters)
-		write(STDOUT_FILENO, buf, letters);
-	else
+	}
+	
+	if ((write(STDOUT_FILENO, buf, count) == -1))
+	{
+		free(buf);
 		return (0);
+	}
 
 	close(fd);
 	free(buf);
