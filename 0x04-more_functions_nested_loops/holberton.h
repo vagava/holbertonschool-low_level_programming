@@ -1,5 +1,6 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
+#include <unistd.h>
 
 int _isupper(int c);
 int _isdigit(int c);
