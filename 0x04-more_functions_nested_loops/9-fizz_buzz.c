@@ -1,16 +1,16 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * @brief 
- * 
+ * main - multiples of three print Fizz, multiples of five print Buzz
+ * Return: 0.
  */
-int main (void)
+int main(void)
 {
 	int i;
 
-	for(i = 1; i <= 100; i++)
+	for (i = 1; i <= 100; i++)
 	{
-		if(i % 3 == 0 && i % 5 == 0)
+		if (i % 3 == 0 && i % 5 == 0)
 		{
 			printf("FizzBuzz ");
 		}
