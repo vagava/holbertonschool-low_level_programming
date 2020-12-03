@@ -1,20 +1,14 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
 #include<stdio.h>
-void reset_to_98(int *n);
-void _puts(char *str);
-void swap_int(int *a, int *b);
-int _strlen(char *s);
-int _putchar(char c);
-void print_rev(char *s);
-void rev_string(char *s);
-int _strlen_recursion(char *s);
-int _pow_recursion(int x, int y);
-int _sqrt_recursion(int n);
-int is_prime_number(int n);
-int is_palindrome(char *s);
-int wildcmp(char *s1, char *s2);
-int main (int argc, char ** argv);
+#include <stdlib.h>
+
 char *create_array(unsigned int size, char c);
+char *_strdup(char *str);
+char *str_concat(char *s1, char *s2);
+int **alloc_grid(int width, int height);
+void free_grid(int **grid, int height);
+char *argstostr(int ac, char **av);
+char **strtow(char *str);
 
 #endif
