@@ -26,8 +26,7 @@ char *_strdup(char *str)
 		return (NULL);
 
 	len = _len(str);
-	printf("len is: %d\n", len);
-	ptr = (char *)malloc((len) * sizeof(char));
+	ptr = (char *)malloc((len + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
 
@@ -35,5 +34,21 @@ char *_strdup(char *str)
 	{
 		ptr[i] = str[i];
 	}
+	ptr[i] = '\0';
 	return (ptr);
+}
+
+int main(void)
+{
+    char *s;
+
+    s = _strdup(("Holberton School!");
+    if (s == NULL)
+    {
+        printf("failed to allocate memory\n");
+        return (1);
+    }
+    printf("%s\n", s);
+    free(s);
+    return (0);
 }
