@@ -7,20 +7,17 @@
  */
 char *_strchr(char *s, char c)
 {
-	char *matched = NULL;
 	int i;
-	if (c == '\0')
-		return(s);
-	else
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (i = 0; s[i] != '\0'; i++)
+		if (s[i] == c)
 		{
-			if (s[i] == c)
-			{
-				matched = &s[i];
-				return (matched);
-			}
+			return (s);
+		}
+		if (s[i] == '\0')
+		{
+			return(0);
 		}
 	}
-	return (matched);
+	return (0);
 }
