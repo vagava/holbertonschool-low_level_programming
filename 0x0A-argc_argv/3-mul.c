@@ -3,16 +3,16 @@
  * main - entri point
  * @argc: number of arguments
  * @argv: arguments
- * return 1 if error, else 0.
+ * Return: 1 if error, else 0.
  */
-int main (int argc, char ** argv)
+int main(int argc, char **argv)
 {
 	int a = 0, b = 0;
 
-	if(argc != 3)
+	if (argc != 3)
 	{
 		printf("Error\n");
-		return(1);
+		return (1);
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[2]);
