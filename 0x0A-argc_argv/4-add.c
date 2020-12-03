@@ -24,10 +24,7 @@ int main(int argc, char **argv)
 				return (1);
 			}
 		}
-	}
-	for (i = 0; i < argc ; i++)
-	{
-		add += atoi(argv[1]);
+		add += atoi(argv[i]);
 	}
 	printf("%d\n", add);
 	return (0);
