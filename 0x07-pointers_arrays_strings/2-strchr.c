@@ -9,13 +9,17 @@ char *_strchr(char *s, char c)
 {
 	char *matched = NULL;
 	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
+	if (c == '\0')
+		return(s);
+	else
 	{
-		if (s[i] == c)
+		for (i = 0; s[i] != '\0'; i++)
 		{
-			matched = &s[i];
-			return (matched);
+			if (s[i] == c)
+			{
+				matched = &s[i];
+				return (matched);
+			}
 		}
 	}
 	return (matched);
