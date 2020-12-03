@@ -1,17 +1,3 @@
-#include "holberton.h"
-/**
- * _len - length of string
- * @ptr: pointer to string
- * Return: length of string
- */
-int _len(char *ptr)
-{
-	int i;
-
-	for (i = 0; ptr[i] < '\0'; i++)
-		{}
-	return (i);
-}
 /**
 * infinite_add - Adds two numbers
 * @n1: Pointer to the first character of number 1
@@ -23,24 +9,28 @@ int _len(char *ptr)
 */
 char *infinite_add(char *n1, char *n2, char *r, int n)
 {
-	int ln1 = 0, ln2 = 0, add = 0, i = n - 2;
+	int len1 = 0, len2 = 0;
+	int add = 0;
+	int i = n - 2;
 
-	ln1 = _len(n1);
-	ln2 = _len(n2);
+	while (n1[len1 + 1] != 0)
+		len1++;
+	while (n2[len2 + 1] != 0)
+		len2++;
 	r[n - 1] = 0;
 
-	while (i >= 0 && (ln1 >= 0 || ln2 >= 0))
+	while (i >= 0 && (len1 >= 0 || len2 >= 0))
 	{
-		add += (ln1 < 0 ? '0' : n1[ln1]) + (ln2 < 0 ? '0' : n2[ln2]);
+		add += (len1 < 0 ? '0' : n1[len1]) + (len2 < 0 ? '0' : n2[len2]);
 		add -= 2 * '0';
 		r[i] = add % 10 + '0';
 		add /= 10;
 		i--;
-		ln1--;
-		ln2--;
+		len1--;
+		len2--;
 	}
 
-	if ((i < ln1 || i < ln2) || (i < 0 && add))
+	if ((i < len1 || i < len2) || (i < 0 && add))
 	return (0);
 
 	add ? r[i] = add + '0' : 1;
