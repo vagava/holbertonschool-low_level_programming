@@ -11,12 +11,26 @@ char *_strchr(char *s, char c)
 	{
 		if (*s == c)
 		{
-			return (s);
+		return (s);
 		}
 	}
-	if (c == '\0')
+	if (c  == '\0')
 	{
-		return(0);
+		return (s);
 	}
 	return (0);
+}
+
+int main(void)
+{
+    char *s = "hello";
+    char *f;
+
+    f = _strchr(s, 'l');
+
+    if (f != NULL)
+    {
+        printf("%s\n", f);
+    }
+    return (0);
 }
