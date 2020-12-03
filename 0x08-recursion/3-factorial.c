@@ -6,14 +6,10 @@
  */
 int factorial(int n)
 {
-	int i, factorial = 1;
-
 	if (n < 0)
 		return (-1);
+	if(n == 0)
+		return(1);
 
-	for (i = n; i > 0; i--)
-	{
-		factorial = factorial * i;
-	}
-	return (factorial);
+	return (n * factorial(n - 1));
 }
