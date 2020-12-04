@@ -10,7 +10,8 @@ void print_all(const char * const format, ...)
 	char *s;
 
 	va_start(list, format);
-	for(i = 0; format; i++)
+	i = 0;
+	while (format)
 	{
 		while (format[i])
 		{
@@ -38,6 +39,7 @@ void print_all(const char * const format, ...)
 		if ((format[i] == 'c' || format[i] == 'f' || format[i] == 's' ||
 		format[i] == 'i') && format[i + 1])
 			printf(", ");
+		i++;
 	}
 	break;
 	}
