@@ -7,7 +7,7 @@
  */
 int _len2d(int ac, char **av)
 {
-	int len = 0;
+	int len = 0, i, j;
 
 	for (i = 0; i < ac; i++)
 	{
