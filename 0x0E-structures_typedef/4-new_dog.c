@@ -1,21 +1,5 @@
 #include "dog.h"
 /**
- * copy_S - Copy a string
- *
- * @original: The original string
- * @copy: The copy
- */
-
-void copy_S(char *original, char *copy)
-{
-	int i;
-
-	for (i = 0; i <= length(original); i++)
-	{
-		*(copy + i) = *(original + i);
-	}
-}
-/**
  * length - Measure the length of a string
  *
  * @string: The string to be measured
@@ -31,6 +15,23 @@ int length(char *string)
 		;
 	return (i);
 }
+/**
+ * copy_S - Copy a string
+ *
+ * @original: The original string
+ * @copy: The copy
+ */
+
+void copy_S(char *original, char *copy)
+{
+	int i;
+
+	for (i = 0; i <= length(original); i++)
+	{
+		*(copy + i) = *(original + i);
+	}
+}
+
 /**
  * new_dog - Create a new dog with given parameters
  *
