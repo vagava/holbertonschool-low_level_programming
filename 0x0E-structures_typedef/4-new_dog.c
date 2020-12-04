@@ -1,18 +1,18 @@
 #include "dog.h"
 /**
- * c_s - Copy a string
+ * copy_S - Copy a string
  *
- * @str_inicial: The str_inicial string
+ * @original: The original string
  * @copy: The copy
  */
 
-void c_s(char *str_inicial, char *copy)
+void copy_S(char *original, char *copy)
 {
 	int i;
 
-	for (i = 0; i <= length(str_inicial); i++)
+	for (i = 0; i <= length(original); i++)
 	{
-		*(copy + i) = *(str_inicial + i);
+		*(copy + i) = *(original + i);
 	}
 }
 /**
@@ -47,6 +47,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
+
 	dog->name = malloc(length(name) + 1);
 	if (dog->name == NULL)
 	{
@@ -61,7 +62,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog->name);
 		return (NULL);
 	}
-	c_s(name, dog->name);
-	c_s(owner, dog->owner);
+	copy_S(name, dog->name);
+	copy_S(owner, dog->owner);
 	return (dog);
 }
