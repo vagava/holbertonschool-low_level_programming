@@ -26,7 +26,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	}
 	/*asignar valores al nuevo nodo*/
 	(*new_node).n = n;
-	(*new_node).prev = temp->next;
+	(*new_node).prev = temp;
 	(*new_node).next = NULL;
 	/*enlazar ultimo nodo con el nuevo*/
 	temp->next = new_node;
@@ -34,7 +34,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 }
 
 /**
- * add_dnodeint - adds a new node at the beginning
+ * addd_dnodeint - adds a new node at the beginning
  * @head: head
  * @n: value of n.
  * Return:pointer to new node.
