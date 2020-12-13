@@ -6,10 +6,7 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	unsigned int counter;
-
-	if (h == NULL)
-		return (0);
+	unsigned int counter = 0;
 
 	while (h)
 	{
