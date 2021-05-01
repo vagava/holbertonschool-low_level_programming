@@ -6,8 +6,8 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	const dlistint_t *tmp;
-	size_t nodes;
+	const dlistint_t *tmp = NULL;
+	size_t nodes = 0;
 
 	if (!h)
 		return (0);
