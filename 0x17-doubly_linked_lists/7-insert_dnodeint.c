@@ -12,7 +12,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	unsigned int iterator = 0;
 	dlistint_t *new = NULL;
 	dlistint_t *tmp = NULL;
-
 	if(!h)
 		return (NULL);
 	if (!*h && idx == 0) /*if list is empty*/
@@ -30,10 +29,18 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		{
 			if (iterator == idx)
 			{
+				if (idx == 0)/*if list not empty*/
+				{
+					new->prev = NULL;
+					*h = new;
+				}
+				else
+				{
+					new->prev = tmp->prev;
+					tmp->prev->next = new;
+				}
 				new->n = n;
 				new->next = tmp;
-				new->prev = tmp->prev;
-				tmp->prev->next = new;
 				tmp->prev = new;
 				return (new);
 			}
