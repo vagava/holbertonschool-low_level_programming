@@ -1,0 +1,15 @@
+# 0x13. C - More singly linked lists
+## Resources
+Read or watch:
+
+- [Google](https://www.google.com/#q=linked+lists)
+- [Youtube](https://www.youtube.com/results?search_query=linked+lists)
+
+## Learning Objectives
+At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+
+### General
+- How to use linked lists
+- Start to look for the right source of information without too much help
+
+###### By Vanessa Garcia
