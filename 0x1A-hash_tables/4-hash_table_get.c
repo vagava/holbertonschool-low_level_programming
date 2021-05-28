@@ -20,7 +20,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 	/*look for collisions*/
 	collision = ht->array[index];
-	while(collision)
+	while (collision)
 	{
 		if (strcmp(collision.key, key) == 0)
 			value = collision->value;
