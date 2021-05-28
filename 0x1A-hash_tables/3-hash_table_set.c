@@ -25,7 +25,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	colision = ht->array[index];
 	while (colision)
 	{
-		if (strcmp(colision->key, key) == 0);
+		if (strcmp(colision->key, key) == 0)
 		{
 			new_value = strdup(value);
 			if(!new_value)
