@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+	"hash_tables.h": "c",
+	"type_traits": "c"
+},
+    "C_Cpp.errorSquiggles": "Disabled"
+}
