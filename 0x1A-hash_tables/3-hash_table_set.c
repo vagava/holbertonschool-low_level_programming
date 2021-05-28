@@ -28,7 +28,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(colision->key, key) == 0)
 		{
 			new_value = strdup(value);
-			if(!new_value)
+			if (!new_value)
 				return (0);
 			colision->value = new_value;
 			return (1);
@@ -50,19 +50,30 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * @index: index of array to insert node
  * Return: 1 if it succeeded, 0 otherwise
  */
-hash_node_t *insert_node(hash_table_t *ht, const char *key, const char *value, unsigned long int index)
+hash_node_t *insert_node(hash_table_t *ht, const char *key, const char *value,
+				unsigned long int index)
 {
 	hash_node_t *node = NULL;
 
 	node = malloc(sizeof(hash_node_t));
 	if (!node)
 		return (NULL);
-
-	node->key = (char *)key;
-	node->value = (char *)value;
+	/*inicialize the node*/
 	node->next = NULL;
-
-
+	node->key = strdup(key);
+	if (!node->key)
+	{
+		free(node);
+		return (NULL);
+	}
+	node->value = strdup(value);
+	if (!node->value || !node->key)
+	{
+		free(node->key);
+		free(node);
+		return (NULL);
+	}
+	/*insert the node*/
 	if (ht->array[index] == NULL)
 		ht->array[index] = node;
 	else
@@ -70,7 +81,6 @@ hash_node_t *insert_node(hash_table_t *ht, const char *key, const char *value, u
 		node->next = ht->array[index];
 		ht->array[index] = node;
 	}
-
 	return (node);
 }
 
