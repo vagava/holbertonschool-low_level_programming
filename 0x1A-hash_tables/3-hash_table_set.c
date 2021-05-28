@@ -12,10 +12,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index = 0;
 	hash_node_t *node = NULL;
 
-	if (!ht)
+	/*validations to table*/
+	if (!ht || !ht->array || ht->size == 0)
 		return (0);
-
-	if (!key || (strcmp(key, "") == 0))
+	/*validations to key an value*/
+	if (!key || (strcmp(key, "") == 0) || !value)
 		return (0);
 
 	node = malloc(sizeof(hash_node_t));
