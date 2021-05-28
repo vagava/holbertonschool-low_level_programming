@@ -22,7 +22,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	collision = ht->array[index];
 	while (collision)
 	{
-		if (strcmp(collision.key, key) == 0)
+		if (strcmp(collision->key, key) == 0)
 			value = collision->value;
 		collision = collision->next;
 	}
