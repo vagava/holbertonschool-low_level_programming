@@ -30,6 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			new_value = strdup(value);
 			if (!new_value)
 				return (0);
+			free(colision->value);
 			colision->value = new_value;
 			return (1);
 		}
@@ -67,7 +68,7 @@ hash_node_t *insert_node(hash_table_t *ht, const char *key, const char *value,
 		return (NULL);
 	}
 	node->value = strdup(value);
-	if (!node->value || !node->key)
+	if (!node->value)
 	{
 		free(node->key);
 		free(node);
