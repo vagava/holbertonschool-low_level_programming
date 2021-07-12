@@ -4,7 +4,7 @@ OBJ = $(SRC: .c = .o)
 NAME = holberton
 RM = rm
 
-all: $(OBJ) $(SRC)
+all: $(OBJ)
 	$(CC) -o $(NAME) $(OBJ)
 
 clean:
